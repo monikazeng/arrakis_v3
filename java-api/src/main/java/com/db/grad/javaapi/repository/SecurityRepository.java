@@ -10,8 +10,8 @@ import java.util.List;
 
 @Repository
 public interface SecurityRepository extends JpaRepository<Security,Integer> {
-//    @Query(nativeQuery = true, value = "select * from Security where Status = active")
-//    List<Security> findActiveBonds;
+   @Query(nativeQuery = true, value = "select * from Security where Status = 'active'")
+   List<Security> findActiveBonds();
     @Query(nativeQuery = true, value ="select issuer from Security where ID= :id")
     List<Security> findIssuerfromBondID(Integer id);
 
