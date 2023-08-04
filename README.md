@@ -135,3 +135,7 @@ The following guides illustrate how to use some features concretely:
 * [Serving Web Content with Spring MVC](https://spring.io/guides/gs/serving-web-content/)
 * [Building REST services with Spring](https://spring.io/guides/tutorials/bookmarks/)
 
+
+
+SELECT * FROM SECURITY WHERE MATURITY_DATE 
+BETWEEN DATEADD('DAY', -5, '2021-08-05 10:39:37') AND DATEADD('DAY', 5, '2021-08-05 10:39:37');
