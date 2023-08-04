@@ -9,18 +9,18 @@ import javax.persistence.Table;
 @Table(name = "users")
 public class User {
     @Id
-    private long user_id;
+    private int user_id;
     private String issuer;
     private String email;
     private String role;
 
     @Id
     @Column(name = "user_id", nullable = false)
-    public long getUser_id() {
+    public int getUser_id() {
         return user_id;
     }
 
-    public void setUser_id(long user_id) {
+    public void setUser_id(int user_id) {
         this.user_id = user_id;
     }
 
