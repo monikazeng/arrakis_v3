@@ -5,11 +5,14 @@ import com.db.grad.javaapi.model.Security;
 import com.db.grad.javaapi.model.Trade;
 import com.db.grad.javaapi.service.SecurityService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 @RestController
@@ -40,6 +43,43 @@ public class SecurityController {
         List<Security> securities = ss.getByName(issuer);
         return ResponseEntity.ok().body(securities);
     }
+
+
+    // mvp 1.0 story 1
+    @GetMapping("/security/active")
+    public ResponseEntity<List<Security>> getActiveBonds()
+        throws ResourceNotFoundException{
+        List<Security> securities = ss.getActive();
+        return ResponseEntity.ok().body(securities);
+    }
+
+    // mvp 1.0 story 2
+//    @GetMapping("/security/date/{date}")
+//    public ResponseEntity<List<Security>> get5DaysBonds(@PathVariable(value="date")LocalDateTime date)
+//            throws ResourceNotFoundException{
+//        List<Security> securities = ss.get5DaysBonds(date);
+//        return ResponseEntity.ok().body(securities);
+//    }
+
+//    @GetMapping("/security/date/{date}")
+//    public ResponseEntity<List<Security>> get5DaysBonds(@PathVariable(value="date") @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME)
+//                                                            LocalDateTime date)
+//            throws ResourceNotFoundException{
+////        LocalDateTime localDateTime = LocalDateTime.parse(date);
+//        System.out.println("right here");
+//        List<Security> securities = ss.get5DaysBonds(date);
+//        return ResponseEntity.ok().body(securities);
+//    }
+
+    @GetMapping("/security/date/")
+    public ResponseEntity<List<Security>> get5DaysBonds(@RequestParam("date") String date)
+            throws ResourceNotFoundException{
+        LocalDateTime localDateTime = LocalDateTime.parse(date);
+        System.out.println(localDateTime);
+        List<Security> securities = ss.get5DaysBonds(localDateTime);
+        return ResponseEntity.ok().body(securities);
+    }
+
 
     @GetMapping("/security/cusip/{cusip}")
     public ResponseEntity<List<Security>> idntifyissuer_Cusip(@PathVariable(value="cusip")String cusip)

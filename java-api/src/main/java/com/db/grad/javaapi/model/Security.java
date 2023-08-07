@@ -3,6 +3,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import java.time.LocalDateTime;
 import java.util.Date;
 @Entity
 @Table(name="Security")
@@ -11,7 +12,7 @@ public class Security {
     private int ID;
     private String Isin;
     private String Cusip;
-    private Date Maturity_date;
+    private LocalDateTime Maturity_date;
     private String Issuer;
     private float coupon;
     private String Type;
@@ -45,11 +46,11 @@ public class Security {
     }
 
     @Column(name="maturity_date", nullable = false)
-    public Date getMaturity_date() {
+    public LocalDateTime getMaturity_date() {
         return Maturity_date;
     }
 
-    public void setMaturity_date(Date maturity_date) {
+    public void setMaturity_date(LocalDateTime maturity_date) {
         Maturity_date = maturity_date;
     }
     @Column(name="issuer_name", nullable = false)

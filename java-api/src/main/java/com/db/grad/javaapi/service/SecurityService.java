@@ -7,6 +7,7 @@ import com.db.grad.javaapi.repository.SecurityRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Service
@@ -39,6 +40,26 @@ public class SecurityService implements IService<Security>{
         List<Security> result = null;
         List<Security> securities = securityRepo.identifyIsinCusip(issuer);
         if (securities.size() >= 1) {
+            result = securities;
+        }
+        return result;
+    }
+
+    // mvp 1.0 story 1
+    public List<Security> getActive(){
+        List<Security> result = null;
+        List<Security> securities = securityRepo.findActiveBonds();
+        if (securities.size() >= 1){
+            result = securities;
+        }
+        return result;
+    }
+
+    // mvp 1.0 story 2
+    public List<Security> get5DaysBonds(LocalDateTime datetime){
+        List<Security> result = null;
+        List<Security> securities = securityRepo.find5DaysBonds(datetime);
+        if (securities.size() >= 1){
             result = securities;
         }
         return result;

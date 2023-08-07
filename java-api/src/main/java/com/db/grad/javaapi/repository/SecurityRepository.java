@@ -16,15 +16,15 @@ public interface SecurityRepository extends JpaRepository<Security,Integer> {
     /* mvp 1.0 story 1
         In order to view the portfolio as a user I want to see all the bonds active in the system
      */
-    @Query(nativeQuery = true, value = "select * from Security where Status = 'active'")
+    @Query(nativeQuery = true, value = "SELECT * FROM Security WHERE Status = 'active'")
     List<Security> findActiveBonds();
 
     /*  mvp 1.0 story 2
         In order to provide optics on positions,
         as a user I want to be able to view Bonds due for maturity within the last and next 5 days
      */
-    @Query(nativeQuery = true, value = "SELECT * FROM SECURITY WHERE MATURITY_DATE BETWEEN DATEADD('DAY', -5, :user_date) AND DATEADD('DAY', 5, :user_date);")
-    List<Security> find5DaysBonds(LocalDateTime user_date);
+    @Query(nativeQuery = true, value = "SELECT * FROM SECURITY WHERE MATURITY_DATE BETWEEN DATEADD('DAY', -5, :date) AND DATEADD('DAY', 5, :date)")
+    List<Security> find5DaysBonds(LocalDateTime date);
 
 
     // mvp 1.0 story 3
