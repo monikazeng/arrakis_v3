@@ -1,4 +1,4 @@
-import http from './axios-common';
-export function getAllBooks(){
+import http from '../services/axios_common';
+export default function getAllBooks(){
     return http.get("/books");
 }
