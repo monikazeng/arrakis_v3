@@ -27,3 +27,6 @@ buy,USD,300,27/09/2021,open,04/02/2016,98.76,1.123,USD,87973RAA8,340,IE00B29LNP3
 buy,USD,300,23/08/2021,open,23/08/2012,98.76,1.123,USD,87973RAA8,340,IE00B29LNP31,First Norway Alpha Kl.IV,22/12/2030,active,SOVN,Trading_book_4,Zurich Pension fund 4
 buy,USD,300,27/09/2021,open,04/02/2013,98.76,1.123,USD,87973RAA8,340,IE00B29LNP31,First Norway Alpha Kl.IV,22/12/2030,active,SOVN,Trading_book_4,Zurich Pension fund 4
 sell,USD,300,23/08/2021,open,23/08/2015,98.76,1.123,USD,87973RAA8,340,IE00B29LNP31,First Norway Alpha Kl.IV,22/12/2030,active,SOVN,Trading_book_4,Zurich Pension fund 4
+sell,GBP,40,04/08/2021,open,06/08/2023,89.56,4.37,USD,,1000,XS1988387210,"BNPParibasIssu 4,37% Microsoft Corp (USD)",06/08/2023,active,CORP,trading_book_1,AZ Holdings Inc
+sell,GBP,2000,30/09/2021,open,10/08/2023,110.35,0.75,GBP,BDCHBW8,900,GB00B6460508,HM Treasury United Kingdon,10/08/2023,not active,GOVN,Trading_book_6,UBS
+buy,USD,300,23/08/2021,open,11/08/2023,98.76,1.123,USD,87973RAA8,340,IE00B29LNP31,First Norway Alpha Kl.IV,11/08/2023,not active,SOVN,Trading_book_4,Zurich Pension fund 4
