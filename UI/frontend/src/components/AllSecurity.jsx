@@ -46,7 +46,7 @@ const getSecurityFromAPI = ()=>{getAllSecurity()
                 <td>{security.type}</td>
                 <td>{security.issuer}</td>
                 <td>{security.maturity_date}</td>
-                <td>{security.face_value}</td>
+                <td>{security.face_Value}</td>
                 <td>{security.currency}</td>
                 <td>{security.coupon}</td>
                 <td>{security.status}</td>
