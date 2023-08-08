@@ -22,6 +22,7 @@ const getIssuerFromAPI = ()=>{getAllIssuers()
 
   return (
     <div>
+      <header className="page-header"></header>
       <h1>Bond Issuer List</h1>
         {Issuers.map((Issuer) => (
           <div key = {Issuer.user_id}>

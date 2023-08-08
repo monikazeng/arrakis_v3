@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import  {useNavigate} from 'react-router-dom';
-
+//import './globalStyles.css';
 const Login = () => {
   const navigate = useNavigate();
   const [email, setEmail] = useState('');
@@ -23,8 +23,10 @@ const Login = () => {
   };
 
   return (
-    <div>
-      <h2>Login</h2>
+    <div className="body">
+      <header className="page-header"></header>
+      <h2>Welcome to Bond User Account</h2>
+      <h2>Please login</h2>
       <form onSubmit={handleLogin}>
         <input
           type="email"

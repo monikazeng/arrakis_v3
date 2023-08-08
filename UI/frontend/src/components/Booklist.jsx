@@ -39,6 +39,7 @@ const getBooksFromAPI = ()=>{getAllBooks()
    
   return (
     <div>
+      <header className="page-header"></header>
       <h1>Bond User Book List</h1>
         {books.map((book) => (
           <div key = {book.book_id}>
