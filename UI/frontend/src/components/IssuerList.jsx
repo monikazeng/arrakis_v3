@@ -17,7 +17,7 @@ const getIssuerFromAPI = ()=>{getAllIssuers()
   .catch(err => {
       setIssuer([]);
       console.log(err);
-  })}
+})}
 
 
   return (
