@@ -24,18 +24,16 @@ const getMatureFromAPI = ()=>{getAllMature()
     <div className="table-container">
      <header className="page-header"></header>
       <h1>Bonds maturing in the next/past 5 days</h1>
-        {Mature.map((Matures) => (
-          <div key = {Mature.security_id}>
     <table>
       <thead>
         <tr>
           <th>ISIN</th>
           <th>CUSIP</th>
           <th>Type</th>
-          <th>Issuer_name</th>
+          <th>Issuer</th>
           <th>Maturity_date</th>
-          {/* <th>Facevalue</th>
-          <th>Bondcurrency</th> */}
+          <th>Facevalue</th>
+          <th>Bondcurrency</th> 
           <th>Coupon</th> 
         </tr>
       </thead>
@@ -45,18 +43,18 @@ const getMatureFromAPI = ()=>{getAllMature()
             <td>{Matures.isin}</td>
             <td>{Matures.cusip}</td>
             <td>{Matures.type}</td>
-            <td>{Matures.issuer_name}</td>
+            <td>{Matures.issuer}</td>
             <td>{Matures.maturity_date}</td>
-            <td>{Matures.facevalue}</td>
-            <td>{Matures.bondcurrency}</td>
+            <td>{Matures.face_Value}</td>
+            <td>{Matures.currency}</td>
             <td>{Matures.coupon}</td> 
           </tr>
         ))}
       </tbody>
     </table>
             </div>
-        ))}
-      </div>
+        
+      
     
   );
 }

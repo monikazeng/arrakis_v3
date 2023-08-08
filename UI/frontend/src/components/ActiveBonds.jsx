@@ -24,18 +24,17 @@ const getActiveFromAPI = ()=>{getAllActiveBonds()
     <div className="table-container">
     <header className="page-header"></header>
       <h1>Active Bonds List</h1>
-        {Active.map((Actives) => (
-          <div key = {Actives.security_id}>
+        
     <table>
       <thead>
         <tr>
           <th>ISIN</th>
           <th>CUSIP</th>
           <th>Type</th>
-          <th>Issuer_name</th>
+          <th>Issuer</th>
           <th>Maturity_date</th>
-          {/* <th>Facevalue</th>
-          <th>Bondcurrency</th> */}
+          <th>Facevalue</th>
+          <th>Bondcurrency</th> 
           <th>Coupon</th> 
         </tr>
       </thead>
@@ -45,18 +44,18 @@ const getActiveFromAPI = ()=>{getAllActiveBonds()
             <td>{Actives.isin}</td>
             <td>{Actives.cusip}</td>
             <td>{Actives.type}</td>
-            <td>{Actives.issuer_name}</td>
+            <td>{Actives.issuer}</td>
             <td>{Actives.maturity_date}</td>
-            <td>{Actives.facevalue}</td>
-            <td>{Actives.bondcurrency}</td>
+            <td>{Actives.face_Value}</td>
+            <td>{Actives.currency}</td>
             <td>{Actives.coupon}</td> 
           </tr>
         ))}
       </tbody>
     </table>
             </div>
-        ))}
-      </div>
+        
+      
     
   );
 }

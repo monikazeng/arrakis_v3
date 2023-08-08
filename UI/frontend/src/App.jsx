@@ -8,6 +8,7 @@ import Dashboard from './components/Dashboard';
 import Booklist from './components/Booklist';
 import ActiveBonds from './components/ActiveBonds';
 import Maturity5days from './components/Maturity5days';
+import AllSercurity from './components/AllSecurity';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/Booklist" element={<Booklist/>} />
         <Route path="/ActiveBonds" element={<ActiveBonds/>}/>
         <Route path="/Maturity5days" element={<Maturity5days/>}/>
+        <Route path="/AllSercurity" element={<AllSercurity/>}/> 
       {/* <Route path="/dashboard" element={<Maturity5days/>} /> */}
     </Routes>
   </Router>

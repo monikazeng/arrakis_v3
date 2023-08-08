@@ -5,6 +5,7 @@ import IssuerList from './IssuerList';
 import Booklist from './Booklist';
 import ActiveBonds from './ActiveBonds';
 import Maturity5days from './Maturity5days';
+import AllSercurity from './AllSecurity';
 
 const Dashboard = () => {
   return (
@@ -22,6 +23,9 @@ const Dashboard = () => {
         </Link>
         <Link to="/Maturity5days">
           <button>Maturity5days</button>
+        </Link>
+        <Link to="/AllSercurity">
+          <button>AllSecurity</button>
         </Link>
       </div>
     </div>
