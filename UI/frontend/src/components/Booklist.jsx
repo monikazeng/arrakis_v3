@@ -28,13 +28,13 @@ const getBooksFromAPI = ()=>{getAllBooks()
   //});
 
   // Function to handle button click and pass props to the child component
-  //function handleButtonClick = () => {
+  const handleButtonClick = () => {
     // Update the dataObject with new values (you can replace these with user inputs or dynamic data)
-   // const newData = {
+   const newData = {
       
-    //};
-  //  setDataObject(newData);
- // };
+    };
+   //setDataObject(newData);
+ };
 
    
   return (
